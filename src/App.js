@@ -20,10 +20,10 @@ const App = () => {
   const [searchTerm, setSearchTerm] = useState('')
 
   const likePost = postId => {
-    const setPosts = posts.map(post => {
+    setPosts(posts.map(post => {
        return post.id === postId ? {...post, likes: post.likes + 1 } : post
-        })
-    return likePost
+        }))
+    console.log("click")
   };
 
   return (
